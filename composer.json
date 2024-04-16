@@ -1,0 +1,21 @@
+{
+    "name": "sentgine/arise",
+    "description": "A simple and lightweight wrapper for creating console commands using PHP.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Sentgine\\Arise\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Adrian Navaja",
+            "email": "sentgine@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "symfony/console": "6.4.x-dev"
+    }
+}
