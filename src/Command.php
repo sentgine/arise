@@ -2,6 +2,7 @@
 
 namespace Sentgine\Arise;
 
+use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Input\ArrayInput;
 use Symfony\Component\Console\Command\Command as SymfonyCommand;
 use Symfony\Component\Console\Formatter\OutputFormatterStyle;
@@ -285,5 +286,25 @@ abstract class Command extends SymfonyCommand
         $output = $output ?? new NullOutput();
 
         return $this->call($commandName, $arguments, $options, $output);
+    }
+
+    /**
+     * Registers all commands into a Symfony Console Application.
+     *
+     * @param string $application The instance of the Symfony Console Application.
+     * @param string $directory The directory containing command files.
+     * @param string $namespace The namespace prefix for the command classes.
+     * @return void
+     */
+    public static function register(Application &$appInstance, string $directory, string $namespace = ''): void
+    {
+        $commandFiles = glob($directory . '/*.php');
+
+        foreach ($commandFiles as $commandFile) {
+            $className = $namespace . basename($commandFile, '.php');
+            if (class_exists($className)) {
+                $appInstance->add(new $className());
+            }
+        }
     }
 }

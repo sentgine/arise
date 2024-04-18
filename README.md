@@ -21,7 +21,7 @@ composer require sentgine/arise:^1.0
 
 ### Creating the arise command
 
-(1) In your project's root directory, at the same level as your **src/** folder, create a **console/Commands** directory. Note that the console/Commands directory structure is just an example. You can create your own folder however you want. Put your commands there.
+(1) In your project's root directory, at the same level as your **src/** folder, create a **console/Commands** directory. Note that the console/Commands directory structure is just an example. You can create your own folder however you want. Put your commands there. You can start by copy and pasting this simple command below to your **console/Commands** directory:
 
 ```php
 <?php
@@ -79,8 +79,15 @@ $application = new Application();
 $application->setName('Name of your application');
 $application->setVersion('v1.0.0');
 
-// Register commands
+// Register commands one by one
 $application->add(new SampleCommand());
+
+// Or you can register all commands from a directory
+Command::register(
+    appInstance: $application,
+    directory: __DIR__ . '/console/Commands', // This expects you to be in the same directory as the executable file
+    namespace: 'Console\\Commands\\' // This is the namespace of the commands
+);
 
 $application->run();
 ```
