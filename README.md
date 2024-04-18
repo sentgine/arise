@@ -80,6 +80,7 @@ chmod +x arise
 ```php
 require __DIR__.'/vendor/autoload.php';
 
+use Sentgine\Arise\Command;
 use Symfony\Component\Console\Application;
 use Console\Commands\SampleCommand;
 
