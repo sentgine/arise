@@ -100,7 +100,7 @@ Command::register(
 $application->run();
 ```
 
-(4) Run this command in our terminal:
+(4) Run this command in your terminal:
 ```bash
 php arise sample:command
 ```
