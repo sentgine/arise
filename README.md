@@ -82,14 +82,10 @@ require __DIR__.'/vendor/autoload.php';
 
 use Sentgine\Arise\Command;
 use Symfony\Component\Console\Application;
-use Console\Commands\SampleCommand;
 
 $application = new Application();
-$application->setName('Name of your application');
+$application->setName('Arise');
 $application->setVersion('v1.0.0');
-
-// Register commands one by one
-$application->add(new SampleCommand());
 
 // Or you can register all commands from a directory
 Command::register(
