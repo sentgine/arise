@@ -1,0 +1,34 @@
+<?php
+
+namespace Console\Commands;
+
+use Sentgine\Arise\Command;
+
+class {{ class_name }} extends Command
+{
+    protected string $signature = '{{ command_name }}';
+    protected string $description = 'The description of your command';
+
+    /**
+     * Configures the command.
+     */
+    protected function configure(): void
+    {
+        parent::configure();
+       
+        // $this->option('option_name', 'The option', 'default_value');
+        // $this->argument('argument_name', 'The argument', 'default_value');
+    }
+
+    /**
+     * Handles the execution of the command.
+     *
+     * @return int The exit code
+     */
+    protected function handle(): int
+    {       
+       // $this->info("My command running...");       
+
+        return true;
+    }
+}

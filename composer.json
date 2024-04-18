@@ -16,6 +16,8 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "symfony/console": "6.4.x-dev"
+        "symfony/console": "6.4.x-dev",
+        "sentgine/file": "^1.0",
+        "sentgine/helper": "^1.0"
     }
 }
