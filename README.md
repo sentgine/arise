@@ -65,9 +65,17 @@ class SampleCommand extends Command
 (2) Create a file either with or without an extension. In our case, just create a file named "arise" and make sure to place it into the root of your project directory.
 
 (3) Open your terminal and make that file executable by running the following command:
+
 ```bash
 chmod +x filename
 ```
+
+Replace the filename with "arise" since this is the name of the executable file in our example. For example:
+
+```bash
+chmod +x arise
+```
+
 (4) After that, add this code to the executable file:
 ```php
 require __DIR__.'/vendor/autoload.php';
