@@ -14,7 +14,7 @@ A simple and lightweight wrapper for creating console commands using PHP. This p
 You can install the package via Composer by running the following command:
 
 ```bash
-composer require sentgine/arise:^1.0
+composer require sentgine/arise:^1.1.0
 ```
 
 ## Sample Usage of Arise
