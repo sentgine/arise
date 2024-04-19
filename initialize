@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/vendor/autoload.php';
+require  './../file/src/Filesystem.php';
 
 use Sentgine\File\Filesystem;
 
